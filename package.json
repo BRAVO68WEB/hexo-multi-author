@@ -6,7 +6,13 @@
   "scripts": {
     "tidy": "prettier --write \"**/*.{js,json,md,yml}\""
   },
-  "keywords": [],
+  "keywords": [
+    "hexo-multi-author",
+    "hexo",
+    "hexo-plugin",
+    "author",
+    "blog"
+  ],
   "author": {
     "name": "Bravo68web",
     "email": "hi@b68.dev",
