@@ -8,8 +8,8 @@ hexo.extend.helper.register("post_author", function () {
 
   const authorFiles = fs.readdirSync(authorDir);
   const authorData = [];
-  for (let i = 0; i < authorFiles.length; i++) {
-    const authorFile = authorFiles[i];
+  for (const element of authorFiles) {
+    const authorFile = element;
     const authorFileData = fs.readFileSync(authorDir + authorFile, "utf8");
     const authorFileJson = jsyml.load(authorFileData);
     authorData.push(authorFileJson);
@@ -25,7 +25,7 @@ hexo.extend.helper.register("post_author", function () {
     }
   }
 
-  const authorTitle = "Author:";
+  let authorTitle = "Author:";
 
   if (post.author.length > 1) {
     authorTitle = "Authors:";
