@@ -1,13 +1,13 @@
-## hexo-multi-author Plugin
+## hexo-multiauthor-plugin Plugin
 
 This plugin allows you to add multiple authors to your Hexo blog. It is based on the [hexo-multiauthor](https://github.com/bob983/hexo-multiauthor)
 
 ## Installation
 
 ``` bash
-$ npm install hexo-multi-author --save
-$ yarn add hexo-multi-author
-$ pnpm install --save hexo-multi-author
+$ npm install hexo-multiauthor-plugin --save
+$ yarn add hexo-multiauthor-plugin
+$ pnpm install --save hexo-multiauthor-plugin
 ```
 
 ## Usage
