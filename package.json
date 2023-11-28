@@ -1,5 +1,5 @@
 {
-  "name": "hexo-multi-author",
+  "name": "hexo-multi-authors",
   "version": "1.0.0",
   "description": "Hexo plugin to support multiple authors",
   "main": "index.js",
