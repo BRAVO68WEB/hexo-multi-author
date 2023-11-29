@@ -52,6 +52,10 @@ For example, if you are using the default Hexo theme, you can add this code snip
 
 - Coming soon
 
+## Tested On
+
+- Hexo 7.0
+
 ## License
 
-MIT
+This project is licenced with [MIT](LICENCE)

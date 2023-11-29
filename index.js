@@ -25,18 +25,5 @@ hexo.extend.helper.register("post_author", function () {
     }
   }
 
-  let authorTitle = "Author:";
-
-  if (post.author.length > 1) {
-    authorTitle = "Authors:";
-  }
-
-  return `
-    <h2>${authorTitle}</h2>
-    <ul>
-        ${post.author
-          .map((author) => `<li>${author.name} - ${author.about} </li>`)
-          .join("\n")}
-    </ul>
-`;
+  return post.author
 });
