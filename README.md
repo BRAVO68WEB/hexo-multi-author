@@ -1,4 +1,10 @@
-## hexo-multiauthor-plugin Plugin
+## hexo-multiauthor-plugin Plugin 👥
+
+![Static Badge](https://img.shields.io/badge/hexo-v7.0.0-blue?style=flat-square&logo=hexo&labelColor=white)
+![npm](https://img.shields.io/npm/v/hexo-multiauthor-plugin?style=for-the-badge&logo=npm)
+![npm bundle size](https://img.shields.io/bundlephobia/min/hexo-multiauthor-plugin?style=for-the-badge&logo=npm)
+![NPM](https://img.shields.io/npm/l/hexo-multiauthor-plugin?style=for-the-badge&logo=github)
+
 
 This plugin allows you to add multiple authors to your Hexo blog. It is based on the [hexo-multiauthor](https://github.com/bob983/hexo-multiauthor)
 
@@ -45,7 +51,20 @@ Add this code snippet to your theme wherever you want to display the author's na
 For example, if you are using the default Hexo theme, you can add this code snippet to `themes/landscape/layout/_partial/article.ejs` just below `<%- post.content %>`:
 
 ```ejs
-<%- post_author() %>
+    <div class="author-banner">
+        <% if (post_author()){ %>
+            <% if (post.author.length > 1){ %>
+                <div class="author-header"><h2>Co Authors</h2></div>
+            <% } else if (post.author.length == 1){ %>
+                <div class="author-header"><h2>Author</h2></div>
+            <% } %>
+            <% post.author.forEach(function(au) { %>
+                <div class="author-name">
+                    <%=au.name %>, <%=au.about %>
+                </div>
+            <% }); %>
+        <% } %>
+    </div>
 ```
 
 ## Options
