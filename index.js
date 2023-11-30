@@ -17,6 +17,9 @@ hexo.extend.helper.register("post_author", function (post_obj) {
 
   const post = post_obj;
   const post_authors = post.authors;
+  if(!post_authors){
+    return;
+  }
   post.author = [];
   for (const p_author of post_authors) {
     const author = authorData.find((a) => a.username === p_author);
