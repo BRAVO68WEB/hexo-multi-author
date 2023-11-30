@@ -52,7 +52,8 @@ For example, if you are using the default Hexo theme, you can add this code snip
 
 ```ejs
     <div class="author-banner">
-        <% if (post_author()){ %>
+        <% let post_obj = post %>
+        <% if (post_author(post_obj)){ %>
             <% if (post.author.length > 1){ %>
                 <div class="author-header"><h2>Co Authors</h2></div>
             <% } else if (post.author.length == 1){ %>
