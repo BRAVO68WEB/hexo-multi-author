@@ -15,7 +15,7 @@ hexo.extend.helper.register("post_author", function () {
     authorData.push(authorFileJson);
   }
 
-  const post = this.post;
+  const post = this.item.next;
   const post_authors = post.authors;
   post.author = [];
   for (const p_author of post_authors) {
