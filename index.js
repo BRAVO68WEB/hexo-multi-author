@@ -3,7 +3,7 @@
 const jsyml = require("js-yaml");
 const fs = require("fs");
 
-hexo.extend.helper.register("post_author", function () {
+hexo.extend.helper.register("post_author", function (post_obj) {
   const authorDir = hexo.source_dir + "_authors/";
 
   const authorFiles = fs.readdirSync(authorDir);
@@ -15,7 +15,7 @@ hexo.extend.helper.register("post_author", function () {
     authorData.push(authorFileJson);
   }
 
-  const post = this.post;
+  const post = post_obj;
   const post_authors = post.authors;
   post.author = [];
   for (const p_author of post_authors) {
